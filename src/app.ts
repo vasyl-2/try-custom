@@ -2,7 +2,7 @@
 // import * as my from "try-thing";
 
 import { BugReport, greet, sealed, BugReportTwo } from "try-thing";
-import { useScale } from "./mixins/mixins";
+import { useGenericMixin, useScale } from "./mixins/mixins";
 
 const res = greet(5, 8);
 //======================================================================================
@@ -28,6 +28,8 @@ console.log('reportingURL_____________', bRTwo);
 // console.log('TEST___________', (bugR as any).test) // for test js, otherwise typescript will not allow even compile even without sealed as test was not added to type
 
 useScale();
+
+useGenericMixin();
 // @sealed
 // class TestR {
 //     a = 55;

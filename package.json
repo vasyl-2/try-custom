@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "compile-app": "tsc src/app.ts",
-    "compile-all": "tsc",
     "start": "ts-node src/app.ts",
     "install-pck-from-tarball": "npm i try-thing-1.2.0.tgz"
   },

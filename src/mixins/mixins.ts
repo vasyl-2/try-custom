@@ -1,4 +1,4 @@
-import {  Scale, Constructor } from "try-thing";
+import {  Scale, Constructor, Jumpable, Positionable } from "try-thing";
 
 export class Sprite {
     name = '';
@@ -13,4 +13,16 @@ export function useScale(): void {
     console.log('RESULT____________', flappySprite.scale);
 }
 
+export class TestGenericMixin {
+    setPos (x: number, y: number): void {
+        const sum = x + y;
+        console.log('SUM_____RESULT_______________', sum);
+    }
+}
+
+export function useGenericMixin(): void {
+    const createdClass = Jumpable(TestGenericMixin);
+    const instance = new createdClass();
+    instance.jump();
+}
 
